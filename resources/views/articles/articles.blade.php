@@ -71,8 +71,8 @@
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="card-body">
-                                    <?php $i=0 ?>
                                     @foreach ($users as $user)
+                                    <?php $i=0 ?>
                                     <div id="accordion" class="w-100 br-2 overflow-hidden">
                                         <div class="">
                                             <div class="accor  bg-primary" id="headingThree3">

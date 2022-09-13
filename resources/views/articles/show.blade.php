@@ -6,7 +6,7 @@
 				<div class="breadcrumb-header justify-content-between">
 					<div class="my-auto">
 						<div class="d-flex">
-							<h4 class="content-title mb-0 my-auto">article</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$article->title}}</span>
+							<h4 class="content-title mb-0 my-auto">Article from {{$user->name . " " . $user->last_name}}</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ About {{$article->title}}</span>
 						</div>
 					</div>
 				</div>

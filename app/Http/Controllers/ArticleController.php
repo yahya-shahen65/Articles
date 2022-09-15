@@ -138,13 +138,17 @@ class ArticleController extends Controller
                 $file=$request->file('image');
                 $name_img=$article->image;
                 $name=$file->getClientOriginalName();
-            }
-            else{
-                $name=$article->image;
-            }
-            if(!empty($request->image)){
                 Storage::disk('images')->delete($article->user_id .'/'.$article->title .'/'.$name_img);
                 $file->storeAs($article->user_id .'/'.$request->title,$name,'images');
+            }
+            else{
+                $article->update([
+                    'title'=>$request->title,
+                    'body'=>$request->body,
+                    'description'=>$request->description,
+                ]);
+                session()->flash('edit','edit successfully');
+                return redirect()->back();
             }
             $article->update([
                 'title'=>$request->title,

@@ -128,13 +128,13 @@
                                                                                         value="{{ $article->id }}">
                                                                                     <input id="img" type="hidden" name="img" class="form-control"
                                                                                         value="{{ $article->image }}">
-                                                                                    <input type="text" class="form-control" id="inputName1" name="title" value={{$article->title}} placeholder="title">
+                                                                                    <input type="text" class="form-control" id="inputName1" name="title" value="{{$article->title}}" placeholder="title">
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <input type="text" class="form-control" id="inputName2" value={{$article->body}} name="body" placeholder="body">
+                                                                                    <input type="text" class="form-control" id="inputName2" value="{{$article->body}}" name="body" placeholder="body">
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <input type="text" class="form-control" id="inputName4" value={{$article->description}} name="description" placeholder="description">
+                                                                                    <input type="text" class="form-control" id="inputName4" value="{{$article->description}}" name="description" placeholder="description">
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <input type="file" class="form-control" id="inputName3" name="image" placeholder="image">

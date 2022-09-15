@@ -110,7 +110,6 @@ class ArticleController extends Controller
         try{
 
             $request->validate([
-                'title'=>['required', 'string', 'max:255'],
                 'body'=>['required', 'string', 'max:255'],
                 'description'=>['required', 'string', 'max:255'],
             ]);
@@ -126,7 +125,6 @@ class ArticleController extends Controller
                 $name=$file->getClientOriginalName();
                 $file->storeAs($article->user_id .'/'.$request->title,$name,'images');
                 $article->update([
-                    'title'=>$request->title,
                     'body'=>$request->body,
                     'description'=>$request->description,
                     'image'=>$name
@@ -143,7 +141,6 @@ class ArticleController extends Controller
             }
             else{
                 $article->update([
-                    'title'=>$request->title,
                     'body'=>$request->body,
                     'description'=>$request->description,
                 ]);
@@ -151,7 +148,6 @@ class ArticleController extends Controller
                 return redirect()->back();
             }
             $article->update([
-                'title'=>$request->title,
                 'body'=>$request->body,
                 'description'=>$request->description,
                 'image'=>$name

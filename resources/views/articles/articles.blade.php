@@ -128,12 +128,14 @@
                                                                                         value="{{ $article->id }}">
                                                                                     <input id="img" type="hidden" name="img" class="form-control"
                                                                                         value="{{ $article->image }}">
-                                                                                    <input type="text" class="form-control" id="inputName1" name="title" value="{{$article->title}}" placeholder="title">
+                                                                                    <input type="hidden" class="form-control" id="inputName1" name="title" value="{{$article->title}}" placeholder="title">
                                                                                 </div>
                                                                                 <div class="form-group">
+                                                                                    <label for="inputName2"><h5>Body</h5></label>
                                                                                     <input type="text" class="form-control" id="inputName2" value="{{$article->body}}" name="body" placeholder="body">
                                                                                 </div>
                                                                                 <div class="form-group">
+                                                                                    <label for="inputName4"><h5>Description</h5></label>
                                                                                     <input type="text" class="form-control" id="inputName4" value="{{$article->description}}" name="description" placeholder="description">
                                                                                 </div>
                                                                                 <div class="form-group">

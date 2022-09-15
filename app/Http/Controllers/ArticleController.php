@@ -172,7 +172,7 @@ class ArticleController extends Controller
         $article=Article::find($request->id);
         $name=$article->image;
         if(Auth::user()->id ==$article->user_id){
-            Storage::disk('images')->delete($article->user_id .'/'.$article->title .'/'.$name);
+            Storage::disk('images')->deleteDirectory ($article->user_id .'/'.$article->title);
             Article::find($request->id)->delete();
             session()->flash('delete','the article deleted ');
             return redirect()->back();
